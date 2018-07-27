@@ -152,12 +152,47 @@ switch(true){
 		console.log(firstName + ' is a boy.');
 		break;
 	case age >= 13 && age < 20:
-		console.log(firstName + ' is a teenager')
+		console.log(firstName + ' is a teenager');
 		break;
 	case age >= 20 && age < 30:
-		console.log(firstName + ' is a young man.')
+		console.log(firstName + ' is a young man.');
 	default:
-		console.log(firstName + ' is a man')
+		console.log(firstName + ' is a man');
 
+}
+
+// Truthy and Falsy values and equality operators
+
+// Falsy Values: Undefined, null, 0, " ", NaN
+// Truthy Values: Not falsy values
+
+var height = 0;
+
+if (height || height === 0) { // Only one of these has to be true 
+	console.log('Variable is defined');
+} else {
+	console.log('Variable has not been defined');
+}
+
+
+// Equality operators
+if (height === '23'){
+	console.log('The == operator does type coercion!');
+
+}
+
+// Coding Challenge 2
+
+var johnScore = 89 + 120 + 103;
+var mikeScore = 116 + 94 + 123;
+console.log(johnScore, mikeScore)
+
+var johnAverage = johnScore / 3;
+var mikeAverage = mikeScore / 3;
+
+if (johnAverage < mikeAverage){
+	console.log("John wins the game!");
+} else {
+	console.log("Mike wins the game!")
 }
 
