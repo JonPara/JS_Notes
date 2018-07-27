@@ -190,9 +190,93 @@ console.log(johnScore, mikeScore)
 var johnAverage = johnScore / 3;
 var mikeAverage = mikeScore / 3;
 
-if (johnAverage < mikeAverage){
-	console.log("John wins the game!");
-} else {
-	console.log("Mike wins the game!")
+// if (johnAverage < mikeAverage){
+// 	console.log("John wins the game!");
+// } else if {
+// 	console.log("Mike wins the game!")
+//  else {
+// 	console.log("It's a tie!")
+// }
+
+
+// Functions 
+
+function calculateAge(birthYear){
+	return 2018 - birthYear;
+} 
+
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1948);
+var ageJane = calculateAge(1969);
+
+console.log(ageJohn, ageMike, ageJane);
+
+function yearsUntilRetirement(year, firstName){
+	var age = calculateAge(year);
+	var retirment = 65 - age;
+
+	if (retirment > 0) {
+	console.log(firstName + " retires in " + retirment + " years.");
+}	else {
+	console.log(firstName + " is already retired.")
+	}
 }
 
+yearsUntilRetirement(1990, 'John')
+yearsUntilRetirement(1969, 'Mike')
+yearsUntilRetirement(1948, 'Jane')
+
+// Function Statements and Expressions
+
+// Function Declaration
+// function whatDoYouDo(job, firstName){}
+
+// Function Expression
+var whatDoYouDo = function(job, firstName){
+	switch(job){
+		case 'teacher':
+			return firstName + ' teaches kids how to code';
+		case 'driver':
+			return firstName + ' drives a cab in Lisbon';
+		case 'designer':
+			return firstName + ' designs beautiful websites';
+		default:
+		return firstName + ' does something else';  
+	}
+}
+
+console.log((whatDoYouDo('teacher', 'John')))
+console.log((whatDoYouDo('designer', 'Jane')))
+console.log((whatDoYouDo('retired', 'Mark')))
+
+
+// Arrays
+
+var names = ["John", "Mark", "Jane"];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names)
+console.log(names.length);
+
+names[1] = 'Ben';
+names[5] = 'Mary'; // Index 4 will be empty
+console.log(names);
+
+var john = ['John', 'Smith', 1990, 'teacher', false];
+john.push('blue'); //Push adds an element
+john.pop() // Pop removes an element
+john.shift() // Moves element
+console.log(john)
+
+console.log(john.indexOf(23))
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer'
+console.log(isDesigner)
+
+//Coding Challenge
+
+bills = [124, 48, 268]
+
+function tipCalculator(bills){
+	
+}
