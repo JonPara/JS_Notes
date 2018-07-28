@@ -371,3 +371,32 @@ if (john.calcBMI() > mark.calcBMI()) {
 } else {
     console.log('They have the same BMI');
 }
+
+
+
+// Loops and Iteration
+
+for (var i = 0; i < 10; i++){
+	console.log(i);
+}
+
+// i = 0, 0 < 10 true, log i to the console, i ++
+// i = 1, 1 < 10 true, log i to the console, i ++
+// Inner working of loop. Loops again
+
+for (var i = 0; i <= 10; i++){
+	console.log(i);
+}
+
+// i = 0, 0 < 10 true, log i to the console, i ++
+// i = 1, 1 < 10 true, log i to the console, i ++
+// Inner working of loop. Loops again and again until condition is met. 
+
+for (var i = 1; i <= 20; i+= 2){
+	console.log(i);
+}
+
+var john = ['john', 'smith', 1990, 'designer', false];
+for (var i = 0; i < john.length; i++){
+	console.log(john[i])
+}
