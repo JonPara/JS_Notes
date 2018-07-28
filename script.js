@@ -275,8 +275,99 @@ console.log(isDesigner)
 
 //Coding Challenge
 
-bills = [124, 48, 268]
 
-function tipCalculator(bills){
-	
+function tipCalculator(bill){
+	var percentage;
+	if (bill < 50){
+		percentage = .20;
+	} else if (bill >= 50 && bill < 200){
+		percentage = .15;
+	}	else{
+		percentage = .10
+	}
+	return percentage * bill;
+}
+
+console.log(tipCalculator(1300));
+
+// var bills = [124,48,268]
+// var tips = [tipCalculator(bills[0])
+// 			tipCalculator(bills[1])
+// 			tipCalculator(bills[2])];
+// console.log(tips);
+
+
+// Objects & Properties
+
+// Object literal
+
+var john = {
+	firstName: 'John',
+	lastName: 'Smith',
+	birthYear: 1990,
+	family: ['Jane', 'Mark', 'Bob', 'Emily'],
+	job: 'teacher',
+	isMarried: false
+};
+
+console.log(john.firstName);
+console.log(john['lastName']);
+var x = 'birthYear';
+console.log(john[x]);
+
+john.job = 'designer';
+john['isMarried'];
+console.log(john[x]);
+
+// New Objective Syntax
+
+var jane = new Object()
+jane.firstName = 'Jane';
+jane.birthYear = 1969;
+jane['lastName'] = 'Smith';
+console.log(jane)
+
+// Methods
+
+var john = {
+	firstName: 'John',
+	lastName: 'Smith',
+	birthYear: 1990,
+	family: ['Jane', 'Mark', 'Bob', 'Emily'],
+	job: 'teacher',
+	isMarried: false,
+	calcAge: function(birthYear){
+		return 2018 - birthYear
+	}
+};
+
+
+console.log(john.calcAge(1990))
+
+// Coding Challenge 4
+
+var john = {
+    fullName: 'John Smith',
+    mass: 110,
+    height: 1.95,
+    calcBMI: function() {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+}
+var mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function() {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+}
+if (john.calcBMI() > mark.calcBMI()) {
+    console.log(john.fullName + ' has a higher BMI of ' + john.bmi);
+} else if (mark.bmi > john.bmi) {
+    console.log(mark.fullName + ' has a higher BMI of ' + mark.bmi);
+} else {
+    console.log('They have the same BMI');
 }
